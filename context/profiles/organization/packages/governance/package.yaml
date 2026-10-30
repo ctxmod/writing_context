@@ -1,0 +1,5 @@
+description: >-
+  Governance for organization-wide context: standalone-understandable
+  shared content, deliberate publication, and no leakage of private or
+  device-local specifics into shared files.
+binds_to_depth: main...

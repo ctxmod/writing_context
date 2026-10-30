@@ -1,0 +1,9 @@
+extends:
+  - github.com/ctxmod/writing_context/context/profiles/core
+title: Context Writing – Citations
+description: >-
+  Citing sources in authored context: pandoc citation forms, locator
+  usage, referencable-name citations, and footnote-aware writing style.
+packages:
+  add:
+    - practice

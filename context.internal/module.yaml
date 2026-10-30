@@ -1,0 +1,8 @@
+title: Context Writing Internal
+description: >-
+  Development-only context for authoring and maintaining the
+  writing_context module itself.
+path: github.com/ctxmod/writing_context/context.internal
+private: true
+requires:
+  - github.com/ctxmod/writing/context

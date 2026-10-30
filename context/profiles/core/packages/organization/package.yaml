@@ -1,0 +1,5 @@
+description: >-
+  File organization for context: frontmatter and content hierarchy, naming
+  and density per category, artifact-agnostic generalization, and the
+  context/context.local layer decision.
+binds_to_depth: main...

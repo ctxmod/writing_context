@@ -1,0 +1,10 @@
+extends:
+  - github.com/ctxmod/writing_context/context/profiles/core
+title: Context Writing – Sources
+description: >-
+  Authoring and maintaining sources: source layout, chunks, summaries,
+  analyses, overviews, SOURCE.md, locator discipline, and raw/ handling
+  with the context/context.local guidance.
+packages:
+  add:
+    - authoring

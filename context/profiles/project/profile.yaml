@@ -1,0 +1,10 @@
+extends:
+  - github.com/ctxmod/writing_context/context/profiles/core
+title: Context Writing – Project Scope
+description: >-
+  Governance for project-specific context writing: what belongs in a
+  project's context versus its published documentation, and the
+  toolchain-as-source-of-truth discipline.
+packages:
+  add:
+    - governance

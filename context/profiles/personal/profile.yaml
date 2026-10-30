@@ -1,0 +1,10 @@
+extends:
+  - github.com/ctxmod/writing_context/context/profiles/core
+title: Context Writing – Personal Scope
+description: >-
+  Governance for personal, device-local context: context.local ownership,
+  the shared-never-depends-on-local direction, and deliberate promotion of
+  local context into shared context.
+packages:
+  add:
+    - governance

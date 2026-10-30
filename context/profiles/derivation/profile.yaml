@@ -1,0 +1,10 @@
+extends:
+  - github.com/ctxmod/writing_context/context/profiles/core
+title: Context Writing – Derivation
+description: >-
+  Deriving new context profiles and packages from external sources: the
+  source-to-context pipeline (chunk, summary, analysis, then rule,
+  reference, or profile), attribution, and inference marking.
+packages:
+  add:
+    - pipeline

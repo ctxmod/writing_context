@@ -1,0 +1,5 @@
+description: >-
+  Governance for project-specific context: what belongs in a project's
+  context versus its published documentation, the toolchain as a source
+  of truth, and the cache-versus-lookup discipline.
+binds_to_depth: main...
