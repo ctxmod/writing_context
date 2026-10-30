@@ -1,0 +1,12 @@
+title: Context Writing
+description: >-
+  Core principles for writing agent context: agent-facing writing, density
+  and load economics, pointers over duplication, file organization, sources
+  and citations, and deriving context from source material.
+  Domain-neutral; consumers select profiles for scope (project,
+  organization, personal) and concern (sources, citations, derivation).
+path: github.com/ctxmod/writing_context/context
+requires:
+  - github.com/ctxmod/writing/context
+default_profiles:
+  - core

@@ -1,0 +1,6 @@
+description: >-
+  Authoring and maintaining a sources/ directory: the two entrypoint
+  layouts, the content-directory taxonomy, source metadata with inference
+  marking, locator discipline, and raw/ handling under the
+  context/context.local rule.
+binds_to_depth: main...

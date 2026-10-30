@@ -1,0 +1,15 @@
+type: report
+title: Example source of the ctxmod_source_example package
+author:
+  - ctxmod writing_context module
+abstract: >-
+  A small synthetic source committed with the writing_context module,
+  under the ctxmod_source_example example package's sources/ directory.
+  It demonstrates the sources structure – chunks, a summary, declared
+  locators, and implicit path locators – and is the target of the live
+  citations carried by the example package's own content domains.
+note: >-
+  Synthetic teaching material: authored for this module, covering no
+  external material, so it declares no coverage. Its citation key is the
+  derived qualified name
+  writing_context_sources_ctxmod_source_example_example.

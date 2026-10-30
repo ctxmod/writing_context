@@ -1,0 +1,5 @@
+description: >-
+  Citing sources in authored context: the pandoc citation forms,
+  referencable names and qualification, resolution semantics, locators,
+  and footnote-aware writing style.
+binds_to_depth: main...

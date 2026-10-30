@@ -1,0 +1,10 @@
+title: Context Writing Core
+description: >-
+  Shared base for every writing_context profile: agent-facing writing
+  principles, density and load economics, pointers over duplication, and
+  file organization. Every other writing_context profile extends this one.
+packages:
+  defaults:
+    - basics
+    - density
+    - organization

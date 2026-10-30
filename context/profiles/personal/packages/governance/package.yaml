@@ -1,0 +1,5 @@
+description: >-
+  Governance for personal, device-local context: context.local ownership,
+  the shared-never-depends-on-local direction, and deliberate promotion
+  of local context into shared context.
+binds_to_depth: main...

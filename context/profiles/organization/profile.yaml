@@ -1,0 +1,10 @@
+extends:
+  - github.com/ctxmod/writing_context/context/profiles/core
+title: Context Writing – Organization Scope
+description: >-
+  Governance for organization-wide context: content that must stand alone
+  for every consuming project, deliberate publication, and no leakage of
+  local or private specifics into shared content.
+packages:
+  add:
+    - governance
