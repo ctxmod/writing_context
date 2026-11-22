@@ -1,4 +1,5 @@
 ---
+name: editing_procedure
 description: >-
   Execute a single bounded step that edits a context tree (a module's
   context/ or its context.local/ overlay): authoring or editing
