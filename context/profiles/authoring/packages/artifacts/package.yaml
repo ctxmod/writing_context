@@ -1,0 +1,7 @@
+description: >-
+  Writing context artifacts: authoring guides per artifact type
+  (reference, rules, rule budgets and link mechanics, skills, agents,
+  commands), the write_context_phase skill that runs discovery through
+  validation for one artifact, and the context_editing_procedure skill
+  for one bounded edit with layer discipline.
+binds_to_depth: main...

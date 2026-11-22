@@ -1,0 +1,6 @@
+description: >-
+  Turning editorial feedback into persisted writing rules: generalize
+  then persist at the narrowest scope, connect instead of duplicating,
+  never guess, test across cases, infer the unstated cause, and record
+  provenance.
+binds_to_depth: main...

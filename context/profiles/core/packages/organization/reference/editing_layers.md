@@ -13,15 +13,48 @@ content. The edit propagates with the next sync or refresh. Correcting
 an error, adding a generally useful principle, tightening a rule all
 consumers read — edit `context/`.
 
+- **Correct**: fix an error in a shared reference file by editing the
+  source in `context/`, then let the fix propagate to every consumer.
+- **Incorrect**: fix the error in rendered output (or in a consumer's
+  copy of the module). The fix disappears the next time the output is
+  rendered or the module is refreshed.
+
 **Create a local override** when one device or workspace needs a
 customization of existing shared content. The local file mirrors the
 shared logical path and replaces it in the effective view for that
 workspace only. Correct shape: the same relative path under
 `context.local/`.
 
+- **Correct**: create
+  `context.local/profiles/<profile>/packages/<package>/rules/<rule>.md`
+  to customize the shared rule at the same path under `context/` for
+  this workspace's needs.
+- **Incorrect**: edit the shared source to add workspace-specific
+  content. The change reaches every consumer.
+
 **Create add-only content** when new content has no shared
 counterpart. New content defaults to `context/`; write it to
 `context.local/` only when it is explicitly device-private.
+
+- **Correct**: document a project-internal concept with no shared
+  equivalent as new content in the project's own context root (its
+  `context/`, or `context.internal/` when it concerns only development
+  of the repository itself).
+- **Incorrect**: add the file to a shared module that other projects
+  consume when only one project needs it. Every other consumer receives
+  unnecessary content.
+
+## Decision guide
+
+| Question | If yes |
+| --- | --- |
+| Does this change benefit every consumer of the shared content? | Edit the shared source |
+| Does this customize existing shared content for one workspace? | Create a local override |
+| Is this new content with no shared counterpart? | Create add-only content |
+| Is the target rendered or generated output? | Stop; edit the source or the override instead |
+
+There are no exceptions: every edit falls into one of the three
+scenarios.
 
 ## Direction of dependence
 
