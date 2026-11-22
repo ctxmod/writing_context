@@ -1,5 +1,7 @@
 description: >-
   Foundational agent-facing writing: direct statements, proportional
-  claims, positive steering, and leading words. These principles apply to
-  every context document an agent reads.
+  claims, positive steering, leading words, the clarity principles, the
+  writing anti-patterns with their revision checklist, and evidence by
+  example (cite real generated output, mark sketches). These principles
+  apply to every context document an agent reads.
 binds_to_depth: main...

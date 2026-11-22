@@ -31,5 +31,7 @@ versus the default? — is model-relative and settled by running the
 document. A failing sentence deletes whole; a leading word too weak to
 beat the default needs a stronger word, not a different technique.
 
+The uncondensed sources: [density by frequency](density_by_frequency.md) and [agent-facing writing](agent_facing_writing.md).
+
 See also [pointers](pointers.md) and
 `[@writing_context_sources_ctxmod_source_example_example, writing principles]`.

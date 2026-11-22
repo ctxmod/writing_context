@@ -31,6 +31,8 @@ Splitting by sequence earns its keep when post-completion steps tempt
 the agent to rush the one in front of it: keeping them out of view
 drives more legwork on the current task.
 
+The uncondensed sources: [agent-facing writing](agent_facing_writing.md) and [density by frequency](density_by_frequency.md).
+
 See also [two loads](two_loads.md),
 [pointers](pointers.md), and
 `[@writing_context_sources_ctxmod_source_example_example, writing principles]`.

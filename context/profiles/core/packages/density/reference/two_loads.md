@@ -20,5 +20,7 @@ The two loads set the price of every placement decision in the
 [information hierarchy](information_hierarchy.md): the hierarchy decides
 where material goes; the loads decide what the placement costs.
 
+The uncondensed sources: [context efficiency](context_efficiency.md), [agent-facing writing](agent_facing_writing.md), and [density by category](density_by_category.md).
+
 See also `[@writing_context_sources_ctxmod_source_example_example, writing principles]` and
 `[@writing_context_sources_ctxmod_source_example_example, context principles]`.
