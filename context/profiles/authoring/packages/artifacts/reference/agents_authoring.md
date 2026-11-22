@@ -31,6 +31,8 @@ Agents receive their content as sub-agent prompts. The definition must be suffic
 
 A package declares its agents in its entrypoint's `agents:` map; each key is the agent's name, with a `description` and the `agent_depth` it runs at (main, workflow, phase, objective, procedure, or task). The agent's prompt is the context rendered for that agent; a longer body lives in the package's `agents/` domain.
 
+An agent's `description` is a context pointer: a harness that delegates automatically picks the agent from its description alone, before the body loads, and every description stays resident in the delegating agent's context. Keep it to the task the agent takes and the condition for choosing it; detail belongs in the body, which loads only when the agent runs. (A vendor example: Claude Code delegates on the subagent `description` and warns at startup when the combined custom-agent descriptions grow past a token threshold.)
+
 The depth rank names themselves (main, workflow, phase, objective, procedure) are reserved: context meant for every agent at one depth is a depth-bound package prompt (`PROMPT.md` with `binds_to_depth`), not an agent named after the depth.
 
 ## Structure Template
@@ -70,6 +72,8 @@ Expected output format or report structure.
 ```
 
 ## Content Guidelines
+
+The template's sections carry the four things a delegated agent needs and cannot infer: an objective, an output format, guidance on which tools and sources to use, and explicit task boundaries (Constraints). Delegations missing them produced duplicated work, gaps, and agents that misread their task.
 
 ### Name
 
@@ -182,3 +186,8 @@ Deliver:
 
 1. The agent declaration (and body, if any) written to its package
 2. Brief confirmation: "Wrote agent: {path}"
+
+## Sources
+
+- https://code.claude.com/docs/en/sub-agents — vendor example of description-driven delegation, separate context windows per sub-agent, and the combined-description size warning (Claude Code docs; accessed 2026-11-22)
+- https://www.anthropic.com/engineering/multi-agent-research-system — what a delegated agent needs from its brief: objective, output format, tool and source guidance, task boundaries (Anthropic Engineering, 2025-06-13; accessed 2026-11-22)
