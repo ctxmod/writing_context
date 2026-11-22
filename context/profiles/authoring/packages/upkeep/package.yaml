@@ -1,0 +1,5 @@
+description: >-
+  Upkeep of a project's own reference context: the project reference
+  sync phase (discovery-only, full, or targeted drift correction) and
+  its step-level sync procedure.
+binds_to_depth: main...

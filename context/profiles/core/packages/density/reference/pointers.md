@@ -26,6 +26,8 @@ harder pruning than the body it points at:
   branch written twice.
 - Cut identity the body already carries.
 
+The uncondensed sources: [agent-facing writing](agent_facing_writing.md) and [reference over duplication](reference_over_duplication.md).
+
 See also [two loads](two_loads.md),
 [information hierarchy](information_hierarchy.md), and
 `[@writing_context_sources_ctxmod_source_example_example, writing principles]`.

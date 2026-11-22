@@ -1,0 +1,13 @@
+extends:
+  - github.com/ctxmod/writing_context/context/profiles/core
+title: Context Writing – Authoring
+description: >-
+  Authoring context artifacts: per-artifact guides for reference files,
+  rules (including the four-tier rule body budget and link mechanics),
+  skills, agents, and commands; the write-context phase and the
+  context-editing procedure skills; and keeping a project's own
+  reference context in sync with its implementation.
+packages:
+  add:
+    - artifacts
+    - upkeep
