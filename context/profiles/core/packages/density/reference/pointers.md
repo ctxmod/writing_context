@@ -3,7 +3,9 @@
 A **context pointer** is a reference held in the agent's context that
 names out-of-context material and encodes the condition for reaching it:
 a skill summary, a link line in a reference file, a rule line naming its
-reference.
+reference. Tool descriptions and sub-agent descriptions are pointers
+too: a harness that selects a tool or delegates to an agent decides
+from the description alone, so the same wording discipline applies.
 
 The pointer's wording, not its target, decides when the agent reaches
 the material and how reliably. A must-have target behind a weakly worded

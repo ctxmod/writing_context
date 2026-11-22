@@ -1,7 +1,9 @@
 description: >-
   Density and load economics for context: the two loads, the information
   hierarchy, tiered budgets by loading frequency and by category, the
-  pointer principle, and pruning; with the uncondensed source doctrine
-  (agent-facing writing, context efficiency, density by frequency,
-  reference over duplication).
+  pointer principle, pruning, and long-horizon context (compaction,
+  notes, memory, sub-agent summaries); with the uncondensed source
+  doctrine (agent-facing writing, context efficiency with context rot,
+  just-in-time retrieval, cache-stable prefixes and tool-result economy,
+  density by frequency, reference over duplication).
 binds_to_depth: main...
