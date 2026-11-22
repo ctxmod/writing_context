@@ -1,4 +1,5 @@
 ---
+name: write_phase
 description: >-
   Context content writing phase: produce context content files
   (reference, rule, skill, agent, tool, command, and documentation
