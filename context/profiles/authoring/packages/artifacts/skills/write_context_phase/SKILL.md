@@ -399,7 +399,8 @@ phase variant.
 - Context efficiency and agent-facing writing: `context_efficiency.md` and `agent_facing_writing.md` in the `density` package of this module's `core` profile
 - The authoring guides for each artifact type in this package: `reference_authoring.md`, `rules_authoring.md`, `skills_authoring.md`, `agents_authoring.md`, `commands_authoring.md`, and `rule_authoring.md`
 
-Depth-scoped writing guidance for the sub-agents this phase launches,
-and the sibling writing phases (report and work-item writing; intent
-writing in its own domain), live with the writing capability in the
-`agentic` module.
+Depth-scoped writing guidance for the sub-agents this phase launches
+(the `writing_objective` and `writing_procedure` skills), the shared
+writing methodology (the `writing_phase` skill) and the sibling report
+writing phase (`write_report_phase`) live in the `agentic` module's
+`workflows` profile.
