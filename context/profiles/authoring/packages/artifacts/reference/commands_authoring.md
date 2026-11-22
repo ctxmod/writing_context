@@ -152,7 +152,7 @@ If validation fails:
 
 ### Context Section
 
-Link to orchestration patterns with link components: the parallel orchestration pattern and the remediation phase skill the workflow falls back on.
+Link to orchestration patterns with link components: the parallel orchestration pattern and the remediation phase skill the workflow falls back on (`remediation_phase` in the `agentic` module's `workflows` profile).
 
 ## Command Types
 
