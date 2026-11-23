@@ -1,6 +1,7 @@
 description: >-
-  Density and load economics for context: the two loads, the information
-  hierarchy, tiered budgets by loading frequency and by category, the
+  Density and load economics for context: the two loads, the load tiers
+  (always, by location, on demand, never) with their tests and ctxmod
+  mechanisms, the in-document ladder, budgets by category, the
   pointer principle, pruning, and long-horizon context (compaction,
   notes, memory, sub-agent summaries); with the uncondensed source
   doctrine (agent-facing writing, context efficiency with context rot,

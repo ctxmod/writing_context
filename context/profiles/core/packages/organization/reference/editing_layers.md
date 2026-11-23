@@ -4,7 +4,8 @@ A context ecosystem keeps shared content in `context/` and device-local
 content in `context.local/`. Choosing the layer before editing prevents
 both failure modes: lost changes (shared content regenerated over a
 local edit) and unnecessary divergence (local specifics leaking into
-shared files).
+shared files). The single-source-of-truth principle is behind the
+split.
 
 ## The three scenarios
 
@@ -34,7 +35,8 @@ workspace only. Correct shape: the same relative path under
 
 **Create add-only content** when new content has no shared
 counterpart. New content defaults to `context/`; write it to
-`context.local/` only when it is explicitly device-private.
+`context.local/` only when it is explicitly device-private. Updating
+an existing file targets its actual owner.
 
 - **Correct**: document a project-internal concept with no shared
   equivalent as new content in the project's own context root (its
