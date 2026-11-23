@@ -71,7 +71,7 @@ clean `ctxmod vet --root .`).
 
 | Parameter | Required | Purpose |
 |-----------|----------|---------|
-| Report | Yes | The sub-agent creates its report just in time, immediately before writing, as a work record (`ctxmod work new report <title> --parent <owning work item, if any>`), writes there, and returns the record path |
+| Report | Yes | The sub-agent creates its report just in time, immediately before writing, as a work record (`ctxmod work new report <title> --owner <owning work item, if any>`), writes there, and returns the record path |
 | SCOPE | Yes | Reference directory to sync |
 | TARGET_FILES | For targeted | Specific files to update |
 | Work item context | If applicable | The owning work records (epic, story, issue) |
@@ -130,7 +130,7 @@ prompt carries:
 Step: <step-name>
 <procedure-specific instructions>
 Create your report just in time, immediately before writing:
-`ctxmod work new report <short title> --parent <owning work item, if any>`;
+`ctxmod work new report <short title> --owner <owning work item, if any>`;
 write there and return the record path.
 ```
 

@@ -13,7 +13,7 @@ Compulsory reads:
 
 Parameters:
 - Report: create it just in time, immediately before writing, as
-  `ctxmod work new report "{nn} reference sync targeted" --parent <work item, if any>`;
+  `ctxmod work new report "{nn} reference sync targeted" --owner <work item, if any>`;
   return the record path
 - TARGET_FILES={specific file paths}
 
