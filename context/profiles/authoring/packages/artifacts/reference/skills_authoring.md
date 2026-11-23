@@ -136,6 +136,26 @@ skill discovery
 
 Multiple agents may implement a single skill's capability.
 
+## The Agent Skills Format
+
+A skill written here may be rendered for harnesses that read the **Agent Skills** open format (`SKILL.md` with YAML frontmatter; originated by Anthropic, published as an open standard in December 2025, contributed to the Linux Foundation's Agentic AI Foundation in October 2026). This module's skill grammar is ctxmod's, not the format's; where the two differ, write for ctxmod and know what the rendered skill must satisfy.
+
+**What the format requires.** Frontmatter `name` (1-64 characters of lowercase letters, digits, and single hyphens, matching the skill directory) and `description` (1-1024 characters, saying what the skill does and when to use it). Optional: `license`, `compatibility` (environment requirements, at most 500 characters), `metadata` (a string-to-string map for client-specific properties), and an experimental `allowed-tools`. One vendor's runtime adds constraints of its own (no XML tags, reserved words in `name`); name those as vendor specifics when they matter.
+
+**Progressive disclosure is the format's load model**, and it is the information hierarchy of the `core` profile applied to skills: metadata (roughly 100 tokens per skill) is resident for every skill at startup; the body (recommended under 5,000 tokens and 500 lines) loads when the skill activates; bundled files load only when the body points at them. The depth-tier ceilings above sit inside the format's 500-line guidance.
+
+| Concern | ctxmod skill | Agent Skills format |
+|---|---|---|
+| Directory name | snake_case (`[a-z][a-z0-9_]{0,63}`) | `name` with hyphens, no underscores — a rendered name must map to that charset |
+| Gating | `binds_to_depth` / `gated_by` and other ctxmod properties | none in the spec; client-specific properties belong under `metadata` |
+| Bundled detail | the skill's own `reference/` | `references/`, `scripts/`, `assets/` by convention |
+| Links | `ctxmod_path` / `ctxmod_inline` link components, resolved at render | relative paths from the skill root, kept one level deep |
+| Description | output-keyed one-liner (template above) | what it does **and** when to use it, with the keywords a task would contain |
+
+**The description is the selection signal.** When a harness chooses skills itself, it decides from `name` and `description` alone — the body is not loaded until after the choice. A skill invoked by name from an orchestrating skill or command can keep the output-keyed one-liner; a skill meant to be picked up by the model unprompted needs its trigger condition in the description, written in the third person ("Extracts …; use when …"), because dispatch timing written only in the body is invisible at selection time.
+
+**Practices the format's guidance adds** that this guide's density rules already imply: assume the model's general knowledge and add only what it lacks; match the degree of freedom to the task's fragility (heuristics for open work, an exact script for a fragile sequence); prefer bundled scripts for deterministic steps and say whether to run or read each one; keep references one level deep from `SKILL.md`, since nested chains invite partial reads; give long reference files a contents list; and build a few evaluation scenarios from observed failures before writing extensive instructions.
+
 ## Pre-Writing Checklist
 
 Before writing a skill:
@@ -162,3 +182,10 @@ Deliver:
 
 1. The skill written to `profiles/{profile}/packages/{package}/skills/{name}/SKILL.md`
 2. Brief confirmation: "Wrote skill: {path}"
+
+## Sources
+
+- https://agentskills.io/specification — Agent Skills format: directory layout, frontmatter fields and limits, progressive-disclosure tiers, one-level file references (accessed 2026-11-22)
+- https://www.linuxfoundation.org/press/agentic-ai-foundation-announces-four-new-projects-agent-skills-open-responses-openenv-and-opensandbox — Agent Skills contributed by Anthropic to the Agentic AI Foundation (Linux Foundation press release, 2026-10-22; accessed 2026-11-22)
+- https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices — vendor authoring guidance: conciseness, degrees of freedom, third-person what-and-when descriptions, one-level references, contents lists, evaluation-first development (Anthropic docs; accessed 2026-11-22)
+- https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills — the progressive-disclosure design rationale and the 2025-12-18 open-standard update (Anthropic Engineering, 2025-10-16; accessed 2026-11-22)
