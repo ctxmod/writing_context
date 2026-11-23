@@ -136,7 +136,7 @@ Specify expected deliverables:
 ## Output
 
 Create a report just in time as a work record
-(`ctxmod work new report <title> --parent <work item>`) containing:
+(`ctxmod work new report <title> --owner <work item>`) containing:
 
 1. Summary (50-100 words)
 2. Findings with file references and line ranges

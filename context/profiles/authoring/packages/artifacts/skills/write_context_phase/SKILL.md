@@ -296,7 +296,7 @@ Phase 6: Remediation (conditional)
 
 The main agent passes report **paths** between phases, never report
 content. Each report is a work-store record (`ctxmod work new report
-<title> --parent <owning work item>`), created just in time by the
+<title> --owner <owning work item>`), created just in time by the
 sub-agent that writes it.
 
 ## Execution Strategy
@@ -381,7 +381,7 @@ Variant: <content-type>
 Phase-specific instructions:
   <phase-specific parameters>
 Write to {OUTPUT_PATH}, or create a report just in time
-(`ctxmod work new report <title> --parent <work item>`) and write there.
+(`ctxmod work new report <title> --owner <work item>`) and write there.
 ```
 
 ## Cross-Workflow Reference

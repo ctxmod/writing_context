@@ -13,7 +13,7 @@ Compulsory reads:
 
 Parameters:
 - Report: create it just in time, immediately before writing, as
-  `ctxmod work new report "{nn} reference drift discovery" --parent <work item, if any>`;
+  `ctxmod work new report "{nn} reference drift discovery" --owner <work item, if any>`;
   return the record path
 - SCOPE=the context module's reference domain (context/reference/ and package reference/ directories)
 
