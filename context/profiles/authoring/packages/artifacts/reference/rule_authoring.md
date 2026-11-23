@@ -16,6 +16,8 @@ The pointer principle in brief, with the referencing principle behind it (point 
 
 ## The Four-Tier Body-Line Budget
 
+These budget tiers subdivide the first two load tiers of `information_hierarchy.md` (the `density` package of this module's `core` profile): an unbounded rule is load tier 1, and the three bounded tiers are load tier 2. Material that fits no budget here is load tier 3 and moves to a reference file.
+
 The budget is keyed to the rule's `paths:` frontmatter property, because `paths:` is the only signal available about how likely the rule is to be relevant when it loads. The tighter the scope, the more often the rule is loaded into a session where it genuinely applies, and the more body it has earned.
 
 In ctxmod, each `paths:` element is a full workspace-relative pattern where `*` and `?` match within one segment, so a pattern matches only paths with its own segment count. A "whole file type" scope is therefore written as one pattern per depth it must reach.
@@ -55,6 +57,8 @@ paths:
 ```
 
 The first two entries are decorative. Any Python file at depths one to three matches the last three, so the rule loads for nearly every Python file and belongs to Tier 2, not Tier 3 — regardless of how specific the narrow entries look.
+
+A catch-all that is true in nearly every session makes the rule load tier 1 in disguise, and it takes the unbounded budget.
 
 When such a rule is over its Tier 2 budget, **dropping the catch-all is usually the better remedy than cutting content.** If the narrow patterns genuinely describe where the rule applies, removing the catch-all both fixes the scope and moves the rule to a tier whose budget it already fits. Cut content only when the catch-all is load-bearing.
 
