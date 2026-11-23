@@ -12,18 +12,9 @@ Every context edit lands in exactly one layer, chosen before writing:
 Every context edit falls into one of the three layer scenarios; there
 are no exceptions.
 
-## Rationale
+Nothing under `context.local` becomes shared by being selected,
+rendered, or found useful; publishing it is a deliberate promotion.
 
-Editing the wrong layer produces lost changes (overwritten the next
-time the output is rendered or the shared module is updated) or
-unnecessary divergence (project-specific content leaking into shared
-files). The single-source-of-truth principle is behind the split.
-New content defaults to `context/`; only an explicitly local override
-goes to `context.local`, and updating an existing file targets its
-actual owner. Nothing under `context.local` becomes shared by being
-selected, rendered, or found useful; publishing it is a deliberate
-promotion.
-
-- [Editing layers](../reference/editing_layers.md)
+- [Editing layers](../reference/editing_layers.md): the failure modes, examples per scenario, and promotion
 
 See also `[@writing_context_sources_ctxmod_source_example_example, context principles]`.
